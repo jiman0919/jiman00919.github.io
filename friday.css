@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans 3';
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.monday {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 8px 12px;
+}
+
+.monday_logo {
+    font-size: 24px;
+    color: white;
+}
+
+.monday_logo i {
+    color: #00ff7f;
+}
+
+.monday_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.monday_menu li {
+    padding: 8px 12px;
+}
+
+.monday_menu li:hover {
+    background-color: #00ff7f;
+    border-radius: 4px;
+}
+
+.monday_icons {
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 0;
+}
+
+.monday_icons li {
+    padding: 8px 12px;
+}
+
+.monday_toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size:24px;
+    color: #00ff7f;
+}
+@media screen and (max-width:768px) {
+    .monday {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+
+    .monday_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
+
+    .monday_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .monday_icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .monday_toogleBtn {
+        display: block;
+    }
+
+    .monday_menu.active ,
+    .monday_icons.active {
+        display: flex;
+    }
+}
